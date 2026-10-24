@@ -1,0 +1,8 @@
+{
+  "default": {
+    "phone_display": "1300 661 065",
+    "phone_href": "tel:1300661065",
+    "email": "training@resultsfirstaid.com"
+  },
+  "note": "Sites may override these defaults; no automatic cross-site deployment."
+}

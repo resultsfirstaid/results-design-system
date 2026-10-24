@@ -1,0 +1,3 @@
+.results-hero { border-radius: var(--results-radius-panel); overflow: hidden; }
+/* Apply this class when the hero panel touches BOTH viewport edges. */
+.results-hero--fullbleed { border-radius: 0; }

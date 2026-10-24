@@ -1,0 +1,11 @@
+.results-footer { background: var(--results-footer-bg); color: var(--results-footer-text); padding-block: 55px; }
+.results-footer__inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.results-footer__brand, .results-footer__brand:hover, .results-footer__brand * { text-decoration: none !important; }
+.results-footer__brand { display: inline-flex; align-items: center; gap: 12px; color: inherit; }
+.results-footer__contact { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; }
+.results-footer__phone, .results-footer__email { color: inherit; text-decoration: none; }
+.results-footer__phone { font-weight: 800; font-size: clamp(19px, 2vw, 25px); line-height: 1.2; }
+.results-footer__email { font-size: 14px; font-weight: 600; overflow-wrap: anywhere; }
+.results-footer__contact a:hover { text-decoration: underline; }
+.results-footer__muted { color: var(--results-footer-muted); }
+@media (max-width: 650px) { .results-footer__inner { flex-direction: column; gap: 28px; } }

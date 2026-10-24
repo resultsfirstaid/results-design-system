@@ -1,0 +1,11 @@
+:root {
+  --results-font-body: 'DM Sans', sans-serif;
+  --results-font-display: 'Manrope', sans-serif;
+  --results-container-max: 1320px;
+  --results-container-gutter: 42px;
+  --results-radius-panel: 28px;
+  --results-radius-button: 999px;
+  --results-section-space: clamp(64px, 7vw, 112px);
+}
+@media (max-width: 650px) { :root { --results-container-gutter: 20px; } }
+.results-container { width: 100%; max-width: var(--results-container-max); padding-inline: var(--results-container-gutter); margin-inline: auto; box-sizing: border-box; }

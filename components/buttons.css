@@ -1,0 +1,3 @@
+.results-button { display: inline-flex; align-items: center; justify-content: center; gap: .6em; min-height: 44px; padding: 12px 22px; border-radius: var(--results-radius-button); font: 700 14px/1.2 var(--results-font-body); text-decoration: none; cursor: pointer; }
+.results-button--primary { background: var(--results-brand-primary); color: #fff; }
+.results-button:focus-visible { outline: 3px solid var(--results-brand-accent); outline-offset: 3px; }
