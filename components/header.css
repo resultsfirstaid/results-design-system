@@ -1,0 +1,13 @@
+/* Shared Results header. Overrides legacy header rules without changing site branding. */
+.results-site-header .header{display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2vw,26px)}
+.results-site-header .r-header__brand{display:inline-flex;align-items:center;flex:0 1 auto;min-width:0;margin-right:auto;text-decoration:none!important}
+.results-site-header .r-header__nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(12px,1.5vw,25px);flex:0 1 auto;min-width:0}
+.results-site-header .r-header__nav .btn{display:none!important}
+.results-site-header .results-header-actions{display:flex;align-items:center;justify-content:flex-end;gap:clamp(10px,1.5vw,20px);flex:0 0 auto;margin-left:0}
+.results-site-header .results-header-cta{display:inline-flex;white-space:nowrap}
+.results-site-header .results-header-menu{display:none;align-items:center;justify-content:center;position:static;margin:0;flex:0 0 auto}
+.results-site-header .results-header-mobile[hidden]{display:none!important}
+.results-site-header .results-header-mobile:not([hidden]){display:block}
+@media(max-width:1100px){.results-site-header .r-header__nav{display:none!important}.results-site-header .results-header-menu{display:inline-flex!important}.results-site-header .results-header-actions{margin-left:auto}}
+@media(max-width:650px){.results-site-header .results-header-cta{display:none!important}}
+@media(prefers-reduced-motion:reduce){.results-site-header *{scroll-behavior:auto!important;transition-duration:.01ms!important}}

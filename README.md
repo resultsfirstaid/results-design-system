@@ -1,42 +1,7 @@
-# Results Website Family — Shared Design Library
+# Results Design System v0.4.0
 
-**Starter v0.1.0 — non-breaking, opt-in.** This is a standalone design repository, **not** a monorepo. All website repositories and Cloudflare Pages projects stay separate.
+Shared UI foundation for the Results website family. Version 0.4 adds opt-in reusable CSS components and dependency-free progressive-enhancement interactions while retaining the existing footer v0.3 contract.
 
-## What is included
-- `tokens/foundations.css`: namespaced type, layout, spacing and radius tokens.
-- `themes/`: separate Workplace and Services theme tokens.
-- `components/`: opt-in shared footer, button, and hero CSS using `results-*` classes.
-- `config/contact.json`: shared default contact information; individual sites may override it.
-- `docs/RESULTS-DESIGN-SYSTEM.md`: reference specification and caveats.
+Read `docs/COMPONENTS.md` before adopting components. The library does not include business logic or replace any live website build script. Themes remain business-specific.
 
-## IMPORTANT: no site changes yet
-Nothing in this repo is loaded by the existing websites automatically. No Cloudflare or Workers changes are required now. Avoid linking directly to GitHub raw files in production.
-
-## Suggested rollout
-1. Commit this starter into `resultsfirstaid/results-design-system`.
-2. Tag the reviewed library `v0.1.0` after confirming its contents.
-3. Pilot **one component**, starting with the Services footer. Copy/pin library files at build time using a locked dependency or an explicit tagged archive, then check the generated `dist` output.
-4. After testing, migrate Workplace. Keep site-specific content and brand themes local.
-5. Future sites can consume the same versioned library. Each site upgrades only when approved.
-
-### Example markup (for future migration, not existing site markup)
-```html
-<footer class="results-footer">
-  <div class="results-container results-footer__inner">
-    <a class="results-footer__brand" href="/">...logo...</a>
-    <div class="results-footer__contact">
-      <a class="results-footer__phone" href="tel:1300661065">1300 661 065</a>
-      <a class="results-footer__email" href="mailto:training@resultsfirstaid.com">training@resultsfirstaid.com</a>
-    </div>
-  </div>
-</footer>
-```
-
-### Load order for future consumers
-`tokens/foundations.css`, then one theme, then component CSS, then any site-specific overrides. Apply `class="results-theme-services"` or `class="results-theme-workplace"` to a shared ancestor (such as `<body>`).
-
-## Design-system guardrails
-- Hero corners are square **whenever the panel is truly full-bleed**, irrespective of device category. Apply `.results-hero--fullbleed` in the layout that actually reaches viewport edges; do not rely on a guessed breakpoint.
-- Keep genuine photos, accessible navigation, strong CTA hierarchy, and minimal decoration.
-- Do not assume a shared phone/email will always be identical across businesses.
-- Do not migrate business logic, checkout, Supabase, booking, Workers or content into this repo.
+Shared header: `components/header.html` + `components/header.css`. The per-site `data/header.json` supplies nav, logo wording and CTA. A `showcase/index.html` provides static reference examples. Do not publish this library until testing the site patches with a local build.
