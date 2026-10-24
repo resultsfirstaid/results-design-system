@@ -1,0 +1,14 @@
+/* Results v0.6.0: additive adoption hooks, not a global reset. */
+:root{--r-radius-card:20px;--r-radius-panel:26px;--r-section-gap:clamp(64px,7vw,112px);--r-field-radius:12px}
+.r-page-heading{font-family:var(--results-font-display,Manrope,sans-serif);letter-spacing:-.045em;line-height:1.1}
+.r-section-heading{font-family:var(--results-font-display,Manrope,sans-serif);letter-spacing:-.035em;line-height:1.15}
+.r-feature-adopt,.r-product-adopt,.r-callout-adopt{min-width:0}
+.r-feature-adopt:focus-within,.r-product-adopt:focus-within{outline-offset:3px}
+.r-fields-adopt,.r-field-adopt{min-width:0}
+.r-field-adopt :is(input,select,textarea):focus-visible{outline:3px solid var(--r-focus,#176f70);outline-offset:2px}
+.r-panel-adopt{min-width:0}
+/* Edge state is determined from actual geometry, not screen width. */
+[data-results-edge-panel].results-edge-flush,.hero.hero-featured>.hero-grid.results-edge-flush,.interior-main .interior-hero-grid.results-edge-flush,.course-landing .landing-hero-grid.results-edge-flush{border-radius:0!important}
+/* Override historical breakpoint-based corner removal on generated Workplace pages. */
+.hero.hero-featured>.hero-grid:not(.results-edge-flush),.interior-main .interior-hero-grid:not(.results-edge-flush),.course-landing .landing-hero-grid:not(.results-edge-flush){border-radius:var(--results-radius-panel,24px)!important}
+@media(prefers-reduced-motion:reduce){.r-feature-adopt,.r-product-adopt{transition:none!important}}
