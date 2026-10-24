@@ -23,3 +23,11 @@
 .results-footer .results-footer__legal{display:flex;gap:18px;flex-wrap:wrap}
 .results-footer .results-footer__legal a:hover{text-decoration:underline}
 @media(max-width:650px){.results-footer .results-footer__main{grid-template-columns:1fr;gap:38px}.results-footer .results-footer__bottom{align-items:flex-start;flex-direction:column}}
+
+/* Consistent primary footer action, with business-specific colours. */
+.results-footer{--rf-cta-bg:#f1d5df;--rf-cta-fg:#23394b}
+.results-theme-services{--rf-cta-bg:#bce9db;--rf-cta-fg:#103335}
+.results-footer .results-footer__cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;align-self:flex-start;min-height:48px;padding:13px 23px;border-radius:999px;background:var(--rf-cta-bg);color:var(--rf-cta-fg)!important;font:700 14px/1.2 'DM Sans',sans-serif;text-decoration:none!important;transition:filter .15s ease,transform .15s ease}
+.results-footer .results-footer__cta:hover{filter:brightness(.96);transform:translateY(-1px)}
+.results-footer .results-footer__cta:focus-visible{outline:3px solid var(--rf-fg);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.results-footer .results-footer__cta{transition:none}.results-footer .results-footer__cta:hover{transform:none}}
